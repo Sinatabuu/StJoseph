@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>St. Joseph House of Hope Foundation | Kilifi, Kenya</title>
+
+  <meta name="description" content="St. Joseph House of Hope Foundation is a Christian community foundation in Kilifi, Kenya, empowering children, youth, and families through education, skills, and holistic support." />
+
+  <style>
+    :root {
+      --primary: #0b7bbf;   /* ocean blue */
+      --primary-dark: #07527f;
+      --accent: #f4a024;    /* warm sun */
+      --bg-light: #f5f7fb;
+      --text-main: #1f2933;
+      --text-muted: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-main);
+      background-color: white;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: #ffffffee;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+    }
+
+    .brand span.logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffffff, var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.9rem;
+      box-shadow: 0 6px 12px rgba(15, 118, 178, 0.35);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-dark);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      box-shadow: 0 10px 20px rgba(11, 123, 191, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 24px rgba(11, 123, 191, 0.45);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--primary);
+      color: var(--primary-dark);
+      background-color: white;
+    }
+
+    .btn-outline:hover {
+      background-color: #eff6ff;
+    }
+
+    /* Hero */
+    .hero {
+      background: radial-gradient(circle at top left, #e0f2fe, white 50%);
+      padding: 3rem 0 3.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: rgba(15, 118, 178, 0.08);
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-kicker span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background-color: var(--accent);
+    }
+
+    .hero h1 {
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      line-height: 1.2;
+      margin-bottom: 0.7rem;
+      color: #111827;
+    }
+
+    .hero h1 span.highlight {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: 1.02rem;
+      color: var(--text-muted);
+      max-width: 32rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .hero-meta {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .hero-meta span::before {
+      content: "•";
+      color: var(--accent);
+    }
+
+    .hero-card {
+      background-color: white;
+      border-radius: 18px;
+      padding: 1.2rem;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .hero-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      color: #111827;
+    }
+
+    .hero-card-location {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .stat {
+      background-color: var(--bg-light);
+      border-radius: 12px;
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+    }
+
+    .stat span {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Sections */
+    section {
+      padding: 3rem 0 3.5rem;
+    }
+
+    section:nth-of-type(odd) {
+      background-color: white;
+    }
+
+    section:nth-of-type(even) {
+      background-color: var(--bg-light);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+      color: #111827;
+    }
+
+    .section-subtitle {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+
+    /* About */
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2.2rem;
+      align-items: flex-start;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.7rem;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background-color: white;
+      border: 1px solid #e5e7eb;
+      color: var(--text-muted);
+    }
+
+    /* Programs */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 16px;
+      padding: 1rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+    }
+
+    .card h3 {
+      font-size: 1.02rem;
+      margin-bottom: 0.3rem;
+      color: #111827;
+    }
+
+    .card span.tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      background-color: rgba(244, 160, 36, 0.12);
+      color: #92400e;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .card ul {
+      list-style: disc;
+      padding-left: 1.1rem;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* Impact */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .impact-numbers {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .impact-box {
+      border-radius: 14px;
+      padding: 0.75rem 0.9rem;
+      background-color: white;
+      border: 1px solid #e5e7eb;
+    }
+
+    .impact-box strong {
+      display: block;
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.1rem;
+    }
+
+    .impact-box span {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+    }
+
+    /* Get Involved */
+    .involved-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.4rem;
+    }
+
+    .involved-card {
+      background-color: white;
+      border-radius: 16px;
+      padding: 1rem;
+      border: 1px solid #e5e7eb;
+    }
+
+    .involved-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .involved-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .involved-card span.note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    form {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #374151;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.6rem 0.7rem;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      font-size: 0.92rem;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.15);
+    }
+
+    footer {
+      background-color: #020617;
+      color: #e5e7eb;
+      padding: 1.5rem 0;
+      font-size: 0.85rem;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .footer-links a {
+      color: #9ca3af;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .two-column,
+      .impact-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .involved-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .cards-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a href="#top" class="brand">
+          <span class="logo">SJ</span>
+          <span>St. Joseph House of Hope Foundation</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#programs">Programs</a>
+          <a href="#impact">Impact</a>
+          <a href="#get-involved">Get Involved</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#get-involved" class="btn btn-primary" style="font-size:0.85rem;">
+          Donate / Partner
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-kicker">
+            <span class="dot"></span>
+            Kilifi, Kenya · STJOSEPHHOUSEOFHOPEFOUNDATION.ORG
+          </div>
+          <h1>
+            Raising a <span class="highlight">generation of hope</span> through
+            education, skills, and faith.
+          </h1>
+          <p class="hero-subtitle">
+            St. Joseph House of Hope Foundation walks with children, youth, and
+            families in Kilifi—providing access to quality education, practical
+            skills, and spiritual support so they can build a better future.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#get-involved" class="btn btn-primary">
+              Support the Mission
+            </a>
+            <a href="#programs" class="btn btn-outline">
+              Explore Our Programs
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span>Christian community foundation</span>
+            <span>Serving Kilifi & coastal Kenya</span>
+            <span>Registered nonprofit organization</span>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-title">
+            From a small nursery to a multi-campus foundation.
+          </div>
+          <div class="hero-card-location">
+            Based in Kilifi County, Kenya · Rooted in the local community
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>5+ campuses</strong>
+              <span>Nursery, primary, high school & vocational centers.</span>
+            </div>
+            <div class="stat">
+              <strong>1000+ learners</strong>
+              <span>Children and youth reached over the years.</span>
+            </div>
+            <div class="stat">
+              <strong>Holistic care</strong>
+              <span>Education, skills, mentorship & spiritual nurture.</span>
+            </div>
+          </div>
+
+          <p class="hero-note">
+            We believe that every child in Kilifi deserves the chance to learn,
+            to be loved, and to discover their God-given potential.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Who We Are</div>
+          <h2 class="section-title">St. Joseph House of Hope Foundation</h2>
+          <p class="section-subtitle">
+            A Christian foundation in Kilifi, Kenya, dedicated to raising
+            children and youth through quality education, skills training, and
+            community support.
+          </p>
+        </div>
+
+        <div class="two-column">
+          <div>
+            <p style="margin-bottom:0.7rem;">
+              St. Joseph House of Hope Foundation began as a simple nursery
+              school with a big dream: to create a safe, nurturing space for
+              children from vulnerable families along the coast of Kenya.
+              Over the years, that dream has grown into a multi-campus work of
+              grace—spanning nursery, primary, high school, and vocational
+              training centers.
+            </p>
+            <p style="margin-bottom:0.7rem;">
+              We are rooted in Kilifi, led by local leaders, and driven by a
+              vision to see every child discover their identity, dignity, and
+              purpose in God. Our work is holistic: we care for minds, hands,
+              and hearts.
+            </p>
+            <p>
+              Through partnership with churches, friends, and organizations
+              around the world, we are building practical, sustainable pathways
+              for children and youth to break cycles of poverty and step into a
+              brighter future.
+            </p>
+
+            <div class="pill-list">
+              <span class="pill">Faith-based & community-led</span>
+              <span class="pill">Child & youth focused</span>
+              <span class="pill">Education & skills</span>
+              <span class="pill">Safe learning spaces</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <h3>Our Mission</h3>
+              <p>
+                To provide holistic education and support to vulnerable
+                children and youth in Kilifi, empowering them to live
+                Christ-centered, impactful lives.
+              </p>
+            </div>
+
+            <div style="height:0.9rem;"></div>
+
+            <div class="card">
+              <h3>Our Vision</h3>
+              <p>
+                A hopeful, thriving Kilifi where every child is loved,
+                educated, and equipped to transform their community.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="campuses">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-kicker">Where We Serve</div>
+      <h2 class="section-title">Our Campuses in Kilifi County</h2>
+      <p class="section-subtitle">
+        From nursery all the way to vocational training, our centers are spread across Kilifi to reach children and youth where they are.
+      </p>
+    </div>
+
+    <div class="cards-grid">
+      <article class="card">
+        <span class="tag">Nursery</span>
+        <h3>St. Joseph Early Childhood Centre</h3>
+        <p>Our starting point for little ones – safe, loving, and playful learning environment.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Primary</span>
+        <h3>St. Joseph Primary</h3>
+        <p>Strong foundations in literacy, numeracy, and character, rooted in faith.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Secondary</span>
+        <h3>High School Support</h3>
+        <p>Partner schools + bursaries and mentorship for teenagers.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Vocational</span>
+        <h3>Skills & Vocational Center</h3>
+        <p>ICT, trades, and entrepreneurship training for youth and young mothers.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <!-- PROGRAMS -->
+    <section id="programs">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">What We Do</div>
+          <h2 class="section-title">Our Core Programs</h2>
+          <p class="section-subtitle">
+            From early childhood to young adulthood, we walk with learners at
+            every stage—creating a continuous pathway of growth.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <span class="tag">Education</span>
+            <h3>Nursery & Primary School</h3>
+            <p>
+              Strong foundations in literacy, numeracy, and character for our
+              youngest learners.
+            </p>
+            <ul>
+              <li>Safe, loving classrooms</li>
+              <li>Nutritious meals where possible</li>
+              <li>Parental involvement & home visits</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="tag">Youth</span>
+            <h3>High School Support</h3>
+            <p>
+              Guiding teenagers through a critical season of identity,
+              academic growth, and decision-making.
+            </p>
+            <ul>
+              <li>Scholarships for needy students</li>
+              <li>Mentorship & discipleship</li>
+              <li>Career & life skills guidance</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="tag">Skills</span>
+            <h3>Vocational & Technical Training</h3>
+            <p>
+              Equipping youth with practical skills that open doors to work
+              and entrepreneurship.
+            </p>
+            <ul>
+              <li>ICT & digital literacy</li>
+              <li>Carpentry, tailoring, and trades</li>
+              <li>Entrepreneurship & basic business</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="tag">Care & Faith</span>
+            <h3>Pastoral Care & Community Outreach</h3>
+            <p>
+              Walking with families through prayer, counseling, and practical
+              support in times of need.
+            </p>
+            <ul>
+              <li>Home visits & follow-up</li>
+              <li>Counseling & prayer support</li>
+              <li>Community discipleship programs</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="impact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Our Impact</div>
+          <h2 class="section-title">Hope in Action in Kilifi</h2>
+          <p class="section-subtitle">
+            Behind every number is a child, a story, and a testimony of what
+            God is doing through simple obedience and partnership.
+          </p>
+        </div>
+
+        <div class="impact-grid">
+          <div>
+            <p style="margin-bottom:0.7rem;">
+              For more than a decade, St. Joseph House of Hope Foundation has
+              been planting seeds of hope along the coast of Kenya. Many of
+              our former pupils are now young adults—working, studying, and
+              serving in their communities.
+            </p>
+            <p style="margin-bottom:0.7rem;">
+              Our dream is to deepen and expand this impact: strengthening our
+              existing campuses, improving infrastructure, and creating more
+              opportunities for teenage mothers, out-of-school youth, and
+              families on the margins.
+            </p>
+            <p>
+              When you partner with us, you are not just giving to a project;
+              you are joining a story that God is writing in Kilifi—child by
+              child, family by family.
+            </p>
+          </div>
+
+          <div>
+            <div class="impact-numbers">
+              <div class="impact-box">
+                <strong>1000+ learners</strong>
+                <span>Reached through our schools and programs over time.</span>
+              </div>
+              <div class="impact-box">
+                <strong>5+ centers</strong>
+                <span>Serving different age groups across Kilifi.</span>
+              </div>
+              <div class="impact-box">
+                <strong>Dozens of staff</strong>
+                <span>Local teachers, mentors, and support staff employed.</span>
+              </div>
+              <div class="impact-box">
+                <strong>Countless stories</strong>
+                <span>Of lives restored, addictions broken, and hope renewed.</span>
+              </div>
+            </div>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.6rem;">
+              *These are working estimates. We are currently updating our
+              data and will publish a detailed annual impact report.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GET INVOLVED -->
+    <section id="get-involved">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Join the Story</div>
+          <h2 class="section-title">How You Can Get Involved</h2>
+          <p class="section-subtitle">
+            The work in Kilifi is carried by prayer, generosity, and
+            partnership. There is a place for you in this story.
+          </p>
+        </div>
+
+        <div class="involved-grid">
+          <div class="involved-card">
+            <h3>Give</h3>
+            <p>
+              Your financial support helps us keep children in school,
+              strengthen our staff, and expand our facilities.
+            </p>
+            <span class="note">
+              You can give a one-time gift or become a monthly partner.
+            </span>
+            <div style="margin-top:0.6rem;">
+              <!-- Replace with your real donation link later -->
+              <a href="#contact" class="btn btn-primary" style="font-size:0.82rem;">
+                Ask About Giving Options
+              </a>
+            </div>
+          </div>
+
+          <div class="involved-card">
+            <h3>Partner</h3>
+            <p>
+              Churches, schools, businesses, and foundations can adopt a
+              project, sponsor a classroom, or collaborate on skills programs.
+            </p>
+            <span class="note">
+              We welcome long-term, relational partnerships built on mutual
+              trust.
+            </span>
+            <div style="margin-top:0.6rem;">
+              <a href="#contact" class="btn btn-outline" style="font-size:0.82rem;">
+                Start a Partnership Conversation
+              </a>
+            </div>
+          </div>
+
+          <div class="involved-card">
+            <h3>Pray & Visit</h3>
+            <p>
+              We deeply value prayer for our staff, students, and community.
+              Where possible, we also host small, purposeful visits.
+            </p>
+            <span class="note">
+              Get in touch to receive specific prayer points or explore visit
+              options.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Let’s Connect</h2>
+          <p class="section-subtitle">
+            Use the form below or the details on the right to reach our team
+            in Kilifi.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <!-- Placeholder form; you can wire it to a service like Formspree or a backend -->
+            <form>
+              <div>
+                <label for="name">Full Name</label>
+                <input id="name" type="text" placeholder="Your name" required />
+              </div>
+              <div>
+                <label for="email">Email Address</label>
+                <input id="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div>
+                <label for="message">How can we help?</label>
+                <textarea id="message" placeholder="Share your question, idea, or message..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+              <p style="font-size:0.78rem;color:var(--text-muted);margin-top:0.4rem;">
+                This demo form does not yet send email. We can integrate a
+                secure contact form or WhatsApp link for you.
+              </p>
+            </form>
+          </div>
+
+          <aside>
+            <div class="card">
+              <h3 style="margin-bottom:0.3rem;">Contact Details</h3>
+              <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:0.6rem;">
+                St. Joseph House of Hope Foundation  
+                Kilifi County, Kenya
+              </p>
+              <p style="font-size:0.88rem;color:var(--text-muted);">
+                <strong>Email:</strong> <span>info@stjosephhouseofhopefoundation.org</span><br />
+                <!-- Replace with your real phone/WhatsApp -->
+                <strong>Phone / WhatsApp:</strong> +254 7XX XXX XXX
+              </p>
+
+              <hr style="margin:0.8rem 0;border:none;border-top:1px solid #e5e7eb;" />
+
+              <p style="font-size:0.88rem;color:var(--text-muted);">
+                <strong>Follow & Share:</strong><br />
+                Facebook / Instagram / YouTube (coming soon)
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div>
+        © <span id="year"></span> St. Joseph House of Hope Foundation.
+        All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#get-involved">Get Involved</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
